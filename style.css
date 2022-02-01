@@ -1,0 +1,166 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+:root {
+
+  --main-color: #e50914;
+  --border-color: #222;
+  --background-color: black;
+  --light-color: white;
+  --card-color: #303030;
+
+  --font-family: 'Roboto', sans-serif;
+  --title-font-size: 3.125rem;
+  --subtitle-font-size: 1.625rem;
+  --footer-font-size: 0.85rem;
+}
+
+
+
+body {
+  font-family: var(--font-family);
+  color:  var(--light-color);
+
+}
+
+
+
+.header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 2rem 2rem 0 2rem;
+  z-index: 2;
+}
+
+.header img{
+  width: 10rem;
+  z-index: 2;
+}
+.side_header{
+  z-index: 2;
+}
+
+.landing_section .main_txt h1 {
+  font-size: var(--title-font-size);
+  max-width: 640px;
+  text-align: center;
+}
+.landing_section .main_txt p {
+  margin: 0 auto 1rem auto;
+}
+
+.landing_section {
+  position: relative;
+  padding: 4rem 4rem 6rem 4rem ;
+  border-bottom: 8px solid var(--border-color);
+}
+
+.landing_section .main_txt {
+  z-index: 1;
+  margin: auto;
+  display: grid;
+  justify-items: center;
+  padding: 6rem 4rem;
+  position: relative;
+  width: 100%;
+  max-width: 950px;
+  gap: 1rem;
+}
+.landing_section .img-background {
+  z-index: 0;
+  position: absolute;
+  top: -160px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.img-background img{
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.img-background::after{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: rgba(0, 0 , 0 , 0.6 );
+  box-shadow: inset 120px 100px 250px black, inset -120px -100px 250px black;
+}
+
+.email_wrap{
+  display: flex;
+  flex-direction: column;
+}
+.email_bar{
+  display: flex;
+}
+
+.email_wrap p {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+/*BUTTONS*/
+
+.sign_in_btn{
+  display: inline-block;
+  background: var(--main-color);
+  color: var(--light-color);
+  padding: 0.4em 0.75em;
+  border-radius: 0.15rem;
+  margin-left: 1.25rem;
+}
+.input_btn{
+  background: var(--main-color);
+  color: var(--light-color);
+  border: none;
+  padding: 0.5em 1em;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: inline-flex;
+  height: 60px;
+  align-items: center;
+  width: 15rem;
+  margin: auto;
+  min-width: 130px;
+  justify-content: center;
+}
+.input_btn:hover {
+  background: red;
+} 
+input{
+ padding: 0.5em;
+ height: 60px;
+ width: 100%;
+}
+select{
+padding: 0.4em 0.75em;
+color: var(--light-color);
+background: rgba(0, 0 , 0 , 0.6 );
+}
