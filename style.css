@@ -52,7 +52,7 @@ body {
 }
 
 .header img{
-  width: 10rem;
+  width: 7rem;
   z-index: 2;
 }
 .side_header{
@@ -124,6 +124,158 @@ body {
 .email_wrap p {
   margin-bottom: 1rem;
   font-size: 1.2rem;
+}
+/*SECTIONS*/
+section {
+  background: var(--background-color);
+  display: flex;
+  align-items: center;
+  padding: 70px 45px;
+  border-bottom: 8px solid var(--border-color);
+  justify-content: center;
+}
+section .section-img{
+  width: 48%;
+  max-width: 640px;
+}
+
+section .section-text {
+  max-width: 450px;
+}
+section .section-text h1{
+ font-size: var(--title-font-size);
+}
+section .section-text p {
+  font-size: var(--subtitle-font-size);
+}
+
+.download_section,
+.kids_section {
+  flex-direction: row-reverse;
+}
+
+.section-img {
+  position: relative;
+}
+.tv_section .section-img img {
+  position: relative;
+  z-index: 4;
+}
+.section-img .tv_animation {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  max-width: 74%;
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.section-img video {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+}
+.devices_section .section-img img{
+  position: relative;
+  z-index: 4;
+}
+.devices_section .section-img .tv_animation2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  max-width: 64%;
+  top: 32%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.download_section .section-img {
+  position: relative;
+}
+/*DOWNLOAD CARD*/
+
+.card_animation {
+  display: flex;
+  align-items: center;
+  border: 3px solid var(--border-color);
+  background: var(--background-color);
+  border-radius: 1rem;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  justify-content: space-between;
+  position: absolute;
+  width: 70%;
+  top: 70%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.card_animation .card_pic img{
+  height: 4rem;
+}
+.card_animation .card_gif img{
+  width: 3rem;
+  height: 3rem;
+  margin: auto 1rem auto 2rem;
+}
+.card_aside{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.card_aside .card_txt{
+  line-height: 1.5rem;
+}
+.card_aside .card_txt .text0 {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.card_aside .card_txt .text1{
+  color: #0071eb;
+}
+
+.questions_section{
+  flex-direction: column;
+  gap: 2rem;
+  
+}
+.questions_section h1 {
+  font-size: var(--title-font-size);
+  margin-bottom: 2rem;
+}
+.questions_section ul {
+  display: grid;
+  gap: 0.5rem;
+  max-width: 815px;
+  width: 90%;
+}
+
+.questions_section ul li button,
+.questions_section ul li div{
+  background: var(--card-color);
+  border: none;
+  color: var(--light-color);
+  padding: 1rem 2rem 1rem 2rem;
+  font-size: var(--subtitle-font-size);
+}
+.questions_section ul li button{
+  margin-bottom: 2px;
+}
+.questions_section ul li button {
+  cursor: pointer;
+  width: -webkit-fill-available;
+}
+.qa_bt{
+  display: flex;
+  justify-content: space-between;
+}
+
+.qa_card {
+
+  visibility: hidden;
+}
+
+.qa_card.active{
+  display: block;
+  visibility: visible;
 }
 
 /*BUTTONS*/
