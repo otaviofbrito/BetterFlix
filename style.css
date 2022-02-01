@@ -269,14 +269,23 @@ section .section-text p {
 }
 
 .qa_card {
-
+  display: none;
   visibility: hidden;
+  transition: 0.2s;
 }
 
-.qa_card.active{
-  display: block;
+.qa_bt.active ~ .qa_card{
   visibility: visible;
+  display: block;
+  transition: all 0.2s;
 }
+
+.qa_bt.active i{
+  transform: rotate(45deg);
+  transition: all 0.2s;
+}
+
+
 
 /*BUTTONS*/
 
