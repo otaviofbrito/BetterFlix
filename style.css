@@ -253,15 +253,16 @@ section .section-text p {
   background: var(--card-color);
   border: none;
   color: var(--light-color);
-  padding: 1rem 2rem 1rem 2rem;
   font-size: var(--subtitle-font-size);
+  margin: auto;
 }
 .questions_section ul li button{
   margin-bottom: 2px;
+  padding: 0.5rem 2rem;
+  width: 620px;
 }
 .questions_section ul li button {
   cursor: pointer;
-  width: -webkit-fill-available;
 }
 .qa_bt{
   display: flex;
@@ -269,15 +270,17 @@ section .section-text p {
 }
 
 .qa_card {
-  display: none;
-  visibility: hidden;
+  height: 0;
+  overflow: hidden;
   transition: 0.2s;
+  width: 620px;
+  padding: 0 1rem 0 1rem;
 }
 
 .qa_bt.active ~ .qa_card{
-  visibility: visible;
-  display: block;
-  transition: all 0.2s;
+  height: max-content;
+  padding: 1rem 1rem 1rem 1rem;
+  transition: 0.2s;
 }
 
 .qa_bt.active i{
@@ -285,7 +288,18 @@ section .section-text p {
   transition: all 0.2s;
 }
 
-
+footer {
+  background: var(--background-color);
+  padding: 5rem;
+  text-align: center;
+  color: var(--card-color);
+}
+footer a {
+  color: var(--card-color);
+}
+footer a:hover{
+  text-decoration: underline var(--card-color);
+}
 
 /*BUTTONS*/
 
